@@ -15,3 +15,22 @@ const bonAppetit = function (bill, k, b) {
   }
   console.log(solution);
 };
+
+// Zufan Elias
+// Minimum distance javascript problem solution
+
+function minimumDistances(a) {
+  // Write your code here
+  let result = [];
+  for (let i = 0; i < a.length; i++) {
+    for (let j = i + 1; j < a.length; j++) {
+      if (a[i] === a[j]) {
+        result.push(Math.abs(i - j));
+      }
+    }
+  }
+  if (result.length === 0) {
+    return -1;
+  }
+  return Math.min(...result);
+}
